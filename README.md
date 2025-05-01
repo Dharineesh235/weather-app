@@ -53,7 +53,7 @@ npm (comes with Node.js)
 
 Step 1: Clone the Repository
 Open your terminal and run:
-    git clone https://github.com/your-username/weather-app.git
+    git clone https://github.com/Dharineesh235/weather-app.git
     cd weather-app
 Step 2: Install Dependencies
 Install all required dependencies using npm:
