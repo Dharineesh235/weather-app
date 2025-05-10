@@ -47,7 +47,7 @@ const SearchHeader = ({ inputRef, dateRef, city, date, degree,setDegree, lang, s
             </div>
 
             {/* Language */}
-            <div className="relative" onClick={()=>setIsLangDropDownOpen(!isLangDropDownOpen)}>
+            <div className="relative" onClick={()=>{setIsLangDropDownOpen(!isLangDropDownOpen)}}>
                 <div className=" flex justify-between items-center gap-2 text-lg border rounded-sm px-4 py-1 cursor-pointer" style={{minWidth:"100px"}}>
                     <div>{languages?.[lang].label}</div>
                     <FaAngleDown/>
@@ -56,6 +56,7 @@ const SearchHeader = ({ inputRef, dateRef, city, date, degree,setDegree, lang, s
                 {isLangDropDownOpen && 
                 <div className="border-solid border-2 border-neutral-100 flex flex-col gap-2 absolute bg-neutral-900 p-2 w-full text-neutral-100 text-center border-neutral-900">
                     {Object.keys(languages).map((item:string, index:number)=><div
+                    className="cursor-pointer"
                     key={"lang"+ index}
                     onClick={()=>setLang(languages[item].code)}
                     >

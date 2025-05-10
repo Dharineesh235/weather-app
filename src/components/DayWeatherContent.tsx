@@ -17,12 +17,13 @@ const DayWeatherContent = ({ weatherData, degree }: { weatherData: WeatherData |
                 {weatherData?.forecast?.forecastday[0]?.day?.condition?.text}
             </div>
             <div>
-                <Image
+            {weatherData?.forecast?.forecastday[0]?.day?.condition?.icon && 
+            <Image
                     src={`https:${weatherData?.forecast?.forecastday[0]?.day?.condition?.icon || ''}`}
                     alt="Weather Icon"
                     width={64}
                     height={64}
-                />
+                />}
             </div>
         </div>
     )

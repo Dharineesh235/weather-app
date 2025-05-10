@@ -24,13 +24,14 @@ const HourlyData = ({ weatherData, degree }: { weatherData: HourData[]; degree: 
 
                         <div className="text-center">
                             {/* <img src={item.condition?.icon} /> */}
+                            {item.condition?.icon && 
                             <Image
                                 src={`https:${item.condition?.icon || ""}`}
                                 alt="Weather condition"
                                 width={64}
                                 height={64}
                                 unoptimized
-                            />
+                            />}
                         </div>
                         <div className="flex justify-center items-center">
                             <div className="text-20 text-xl">{
